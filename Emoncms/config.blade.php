@@ -5,12 +5,12 @@
         {!! Form::text('config[override_url]', null, array('placeholder' => __('app.apps.override'), 'id' => 'override_url', 'class' => 'form-control')) !!}
     </div>
     <div class="input">
-        <label>{{ __('app.apps.username') }}</label>
-        {!! Form::text('config[username]', null, array('placeholder' => __('app.apps.username'), 'data-config' => 'username', 'class' => 'form-control config-item')) !!}
+        <label>{{ __('app.apps.tagId') }}</label>
+        {!! Form::text('config[tagId]', (isset($item) ? $item->getconfig()->tagId : null), array('placeholder' => __('app.apps.tagId'), 'data-config' => 'tagId', 'class' => 'form-control config-item')) !!}
     </div>
     <div class="input">
-        <label>{{ __('app.apps.password') }}</label>
-        {!! Form::text('config[password]', null, array('placeholder' => __('app.apps.password'), 'data-config' => 'password', 'class' => 'form-control config-item')) !!}
+        <label>{{ __('app.apps.apikey') }}</label>
+        {!! Form::text('config[apikey]', (isset($item) ? $item->getconfig()->apikey : null), array('placeholder' => __('app.apps.apikey'), 'data-config' => 'apikey', 'class' => 'form-control config-item')) !!}
     </div>
     <div class="input">
         <button style="margin-top: 32px;" class="btn test" id="test_config">Test</button>
