@@ -9,10 +9,15 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
 
     function __construct() {
         //$this->jar = new \GuzzleHttp\Cookie\CookieJar; // Uncomment if cookies need to be set
+        $this->vars = [
+            
     }
 
     public function test()
     {
+        $attrs = [
+            'headers'  => ['Accept' => 'application/json']
+        ];
         $test = parent::appTest($this->url('status'));
         echo $test->status;
     }
@@ -29,7 +34,7 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
     }
     public function url($endpoint)
     {
-        $api_url = parent::normaliseurl($this->config->url).$endpoint;
+        $api_url = parent::normaliseurl($this->config->url).$endpoint.'?apikey='.$this->config->apikey;
         return $api_url;
     }
 }
