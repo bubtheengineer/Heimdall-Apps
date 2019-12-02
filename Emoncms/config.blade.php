@@ -5,8 +5,8 @@
         {!! Form::text('config[override_url]', null, array('placeholder' => __('app.apps.override'), 'id' => 'override_url', 'class' => 'form-control')) !!}
     </div>
     <div class="input">
-        <label>{{ __('app.apps.tagId') }}</label>
-        {!! Form::text('config[tagId]', (isset($item) ? $item->getconfig()->tagId : null), array('placeholder' => __('app.apps.tagId'), 'data-config' => 'tagId', 'class' => 'form-control config-item')) !!}
+        <label>{{ __('app.apps.feedId') }}</label>
+        {!! Form::text('config[feedId]', (isset($item) ? $item->getconfig()->feedId : null), array('placeholder' => __('app.apps.feedId'), 'data-config' => 'feedId', 'class' => 'form-control config-item')) !!}
     </div>
     <div class="input">
         <label>{{ __('app.apps.apikey') }}</label>
