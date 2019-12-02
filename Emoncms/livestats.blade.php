@@ -1,10 +1,10 @@
 <ul class="livestats">
     <li>
-        <span class="title">Queue</span>
-        <strong>{!! $queue_size !!}</strong>
+        <span class="title">Tag</span>
+        <strong>{!! $tag_name !!}</strong>
     </li>
     <li>
-        <span class="title">Speed</span>
-        <strong>{!! $current_speed !!}</strong>
+        <span class="title">Value</span>
+        <strong>{!! $tag_value !!}</strong>
     </li>
 </ul>
