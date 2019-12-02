@@ -8,9 +8,7 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
     //protected $method = 'POST';  // Uncomment if requests to the API should be set by POST
 
     function __construct() {
-        //$this->jar = new \GuzzleHttp\Cookie\CookieJar; // Uncomment if cookies need to be set
-        $this->vars = [
-            
+        //$this->jar = new \GuzzleHttp\Cookie\CookieJar; // Uncomment if cookies need to be set            
     }
 
     public function test()
@@ -18,7 +16,7 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
         $attrs = [
             'headers'  => ['Accept' => 'application/json']
         ];
-        $test = parent::appTest($this->url('status'));
+        $test = parent::appTest($this->url('feed/timevalue.json').'&id='.$this->config->feedId);
         echo $test->status;
     }
 
