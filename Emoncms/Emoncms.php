@@ -16,7 +16,7 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
         $attrs = [
             'headers'  => ['Accept' => 'application/json']
         ];
-        $test = parent::appTest($this->url('feed/timevalue.json').'&id='.$this->config->feedId);
+        $test = parent::appTest($this->url('feed/timevalue.json');
         echo $test->status;
     }
 
@@ -32,7 +32,7 @@ class Emoncms extends \App\SupportedApps implements \App\EnhancedApps {
     }
     public function url($endpoint)
     {
-        $api_url = parent::normaliseurl($this->config->url).$endpoint.'?apikey='.$this->config->apikey;
+        $api_url = parent::normaliseurl($this->config->url).$endpoint.'?apikey='.$this->config->apikey.'&id='.$this->config->feedId);
         return $api_url;
     }
 }
